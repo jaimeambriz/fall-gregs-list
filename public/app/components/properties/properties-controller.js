@@ -18,6 +18,7 @@ function PropertiesController() {
               <div class="col-md-3">
                   <div class="panel panel-info">
                       <div class="panel-heading">
+                      <i class="glyphicon glyphicon-trash pull-right" onclick="app.controllers.propertiesCtrl.removeProperty('${property._id}')"></i>
                           <h3>${property.title}</h3>
                           <h6>${property.location}</h6>
                       </div>

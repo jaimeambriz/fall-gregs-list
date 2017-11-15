@@ -7,8 +7,8 @@ router.get('/api/properties', (req, res, next) => {
         .catch(err => res.status(400).send(err))
 })
 
-router.get('api/properties/:id', (req, res, next) => {
-    Properties.findbyid(req.params.id)
+router.get('/api/properties/:id', (req, res, next) => {
+    Properties.findById(req.params.id)
         .then(property => res.send(property))
         .catch(err => res.status(400).send(err))
 })

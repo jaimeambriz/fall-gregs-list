@@ -25,7 +25,7 @@ function AutosController() {
             <div class="col-md-3">
                 <div class="panel panel-info">
                     <div class="panel-heading">
-                        <i class="glyphicon glyphicon-trash pull-right" onclick="app.controllers.autosCtrl.removeAuto(${i})"></i>
+                        <i class="glyphicon glyphicon-trash pull-right" onclick="app.controllers.autosCtrl.removeAuto('${auto._id}')"></i>
                         <h3>${auto.title}</h3>
                         <h6>${auto.location}</h6>
                     </div>
@@ -66,6 +66,7 @@ function AutosController() {
   }
 
   this.removeAuto = function removeAuto(index) {
+    debugger
     autosService.removeAuto(index, getAutos)
   }
 
