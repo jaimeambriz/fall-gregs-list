@@ -1,15 +1,9 @@
 function AnimalsController() {
     var animalsService = new AnimalsService()
   
-    // Buttons
-    // Add New animal
-    // Delete animal
-    // Report Flag
-    // View More
-    // Filter / Search
     var animalsElem = document.getElementById('animals-list')
     var animalsFormElem = document.getElementById('add-animal-form')
-    var showButton = document.getElementById('show-button')
+    var showButton = document.getElementById('show-button-animals')
     function drawAnimals() {
       // WHERE ARE ALL THE animals?
       var animals = animalsService.getAnimals()
@@ -25,7 +19,7 @@ function AnimalsController() {
                       </div>
                       <div class="panel-body text-center">
                           <img src="${animal.img}" class="img-responsive">
-                          <h4>${animal.year} - ${animal.make} ${animal.model}</h4>
+                          <h4>${animal.type} - ${animal.age}, ${animal.description}</h4>
                       </div>
                       <div class="panel-footer">
                           <h5>$ ${animal.price}</h5>

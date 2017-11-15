@@ -21,12 +21,12 @@
             <div class="col-sm-6 col-sm-offset-3 hidden" id="add-auto-form">
                 <form class="form" onsubmit="app.controllers.autosCtrl.addAuto(event)">
                     <div class="form-group">
-                        <label for="title">Title:</label>
+                        <label for="title">title:</label>
                         <input type="text" name="title" class="form-control" placeholder="Title" required>
                     </div>
                     <div class="form-group">
-                        <label for="make">Make:</label>
-                        <input type="text" name="make" class="form-control" placeholder="Make">
+                        <label for="make">make:</label>
+                        <input type="text" name="make" class="form-control" placeholder="make">
                     </div>
                     <div class="form-group">
                         <label for="model">model:</label>
@@ -91,33 +91,28 @@
                 </div>
             </div> -->
         </div>
+
+
+
         <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
-                <button id="show-button" class="btn btn-info" onclick="app.controllers.autosCtrl.showAddAutoForm()">Add A Listing</button>
+                <button id="show-button-animals" class="btn btn-info" onclick="app.controllers.animalsCtrl.showAddanimalForm()">Add A Listing</button>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-6 col-sm-offset-3 hidden" id="add-auto-form">
-                <form class="form" onsubmit="app.controllers.autosCtrl.addAuto(event)">
+            <div class="col-sm-6 col-sm-offset-3 hidden" id="add-animal-form">
+                <form class="form" onsubmit="app.controllers.animalsCtrl.addAnimal(event)">
                     <div class="form-group">
                         <label for="title">Title:</label>
                         <input type="text" name="title" class="form-control" placeholder="Title" required>
                     </div>
                     <div class="form-group">
-                        <label for="make">Make:</label>
-                        <input type="text" name="make" class="form-control" placeholder="Make">
+                        <label for="type">type:</label>
+                        <input type="text" name="type" class="form-control" placeholder="type">
                     </div>
                     <div class="form-group">
-                        <label for="model">model:</label>
-                        <input type="text" name="model" class="form-control" placeholder="model">
-                    </div>
-                    <div class="form-group">
-                        <label for="year">year:</label>
-                        <input type="text" name="year" class="form-control" placeholder="year">
-                    </div>
-                    <div class="form-group">
-                        <label for="mileage">mileage:</label>
-                        <input type="text" name="mileage" class="form-control" placeholder="mileage">
+                        <label for="age">age:</label>
+                        <input type="text" name="age" class="form-control" placeholder="age">
                     </div>
                     <div class="form-group">
                         <label for="color">color:</label>
@@ -126,10 +121,6 @@
                     <div class="form-group">
                         <label for="price">price:</label>
                         <input type="text" name="price" class="form-control" placeholder="price" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="condition">condition:</label>
-                        <input type="text" name="condition" class="form-control" placeholder="condition">
                     </div>
                     <div class="form-group">
                         <label for="description">description:</label>
@@ -148,51 +139,46 @@
                         <input type="text" name="img" class="form-control" placeholder="img">
                     </div>
                     <div class="form-group">
-                        <button class="btn btn-success" type="submit">Add Car</button>
+                        <button class="btn btn-success" type="submit">Add Animal</button>
                     </div>
                 </form>
             </div>
         </div>
         <div class="row" id="animals-list"></div>
+
+
+
         <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
-                <button id="show-button" class="btn btn-info" onclick="app.controllers.autosCtrl.showAddAutoForm()">Add A Listing</button>
+                <button id="show-button-property" class="btn btn-info" onclick="app.controllers.propertiesCtrl.showAddPropertyForm()">Add A Listing</button>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-6 col-sm-offset-3 hidden" id="add-auto-form">
-                <form class="form" onsubmit="app.controllers.autosCtrl.addAuto(event)">
+            <div class="col-sm-6 col-sm-offset-3 hidden" id="add-property-form">
+                <form class="form" onsubmit="app.controllers.propertiesCtrl.addProperty(event)">
                     <div class="form-group">
                         <label for="title">Title:</label>
                         <input type="text" name="title" class="form-control" placeholder="Title" required>
                     </div>
                     <div class="form-group">
-                        <label for="make">Make:</label>
-                        <input type="text" name="make" class="form-control" placeholder="Make">
+                        <label for="size">size:</label>
+                        <input type="text" name="size" class="form-control" placeholder="size">
                     </div>
                     <div class="form-group">
-                        <label for="model">model:</label>
-                        <input type="text" name="model" class="form-control" placeholder="model">
+                        <label for="rooms">rooms:</label>
+                        <input type="text" name="rooms" class="form-control" placeholder="rooms">
+                    </div>
+                    <div class="form-group">
+                        <label for="baths">baths:</label>
+                        <input type="text" name="baths" class="form-control" placeholder="baths">
                     </div>
                     <div class="form-group">
                         <label for="year">year:</label>
                         <input type="text" name="year" class="form-control" placeholder="year">
                     </div>
                     <div class="form-group">
-                        <label for="mileage">mileage:</label>
-                        <input type="text" name="mileage" class="form-control" placeholder="mileage">
-                    </div>
-                    <div class="form-group">
-                        <label for="color">color:</label>
-                        <input type="text" name="color" class="form-control" placeholder="color">
-                    </div>
-                    <div class="form-group">
                         <label for="price">price:</label>
                         <input type="text" name="price" class="form-control" placeholder="price" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="condition">condition:</label>
-                        <input type="text" name="condition" class="form-control" placeholder="condition">
                     </div>
                     <div class="form-group">
                         <label for="description">description:</label>
@@ -211,7 +197,7 @@
                         <input type="text" name="img" class="form-control" placeholder="img">
                     </div>
                     <div class="form-group">
-                        <button class="btn btn-success" type="submit">Add Car</button>
+                        <button class="btn btn-success" type="submit">Add prooperty</button>
                     </div>
                 </form>
             </div>
@@ -219,7 +205,7 @@
         <div class="row" id="properties-list"></div>
     </div>
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="app/components/animals/animals-service.js"></script>
     <script src="app/components/autos/autos-service.js"></script>
     <script src="app/components/properties/properties-service.js"></script>
